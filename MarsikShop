@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Перша база на Марсі</title>
+    <title>MarsikShop</title>
 
     <style>
         * {
@@ -216,23 +216,69 @@
             width: 400px;
         }
 
+        #modalTitle {
+            font-weight: 400;
+            font-size: 24px;
+            color: #000;
+            text-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+        }
+
         .modal-content img {
             width: 100%;
             height: 200px;
             object-fit: cover;
             margin-bottom: 10px;
+            border-radius: 15px;
+        }
+
+        #modalDescription {
+            font-weight: 400;
+            font-size: 18px;
+            color: #000;
+            text-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+        }
+
+        #modalPrice {
+            position: relative;
+            top: -270px;
+            left: 10px;
+            color: #fff;
+            text-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+            font-size: 36px;
         }
 
         .modal-content input {
             width: 100%;
             padding: 10px;
             margin-top: 10px;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 15px 25px 0 rgba(144, 144, 144, 0.25), 0 0 0 1px #fff, 0 10px 20px 0 rgba(217, 217, 217, 0.25), 0 5px 5px 1px rgba(255, 255, 255, 0.5);
+            background: #fff;
+            transition: 0.25s;
+        }
+
+        .modal-content input:hover {
+            transform: scale(1.02);
+            border: 1px solid #c465ff;
+            transition: 0.25s;
         }
 
         .modal-content button {
             margin-top: 10px;
             padding: 10px;
             width: 100%;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 15px 25px 0 rgba(144, 144, 144, 0.25), 0 0 0 1px #fff, 0 10px 20px 0 rgba(217, 217, 217, 0.25), 0 5px 5px 1px rgba(255, 255, 255, 0.5);
+            background: #fff;
+            transition: 0.25s;
+        }
+
+        .modal-content button:hover {
+            transform: scale(1.02);
+            border: 1px solid #fff700;
+            transition: 0.25s;
         }
 
         .cart {
@@ -301,9 +347,10 @@
   <!-- МОДАЛЬНЕ ВІКНО ТОВАРУ -->
     <div class="modal" id="productModal">
         <div class="modal-content">
-            <h2 id="modalTitle"></h2>
 
             <img id="modalImage" src="" alt="">
+
+            <h2 id="modalTitle"></h2>
 
             <p id="modalDescription"></p>
 
@@ -352,6 +399,54 @@
         price: 60,
         description: "Швидко ростуть навіть на Марсі.",
         image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061"
+      },
+
+      {
+        id: 4,
+        name: "Марсіанські яблука",
+        price: 130,
+        description: "Ніколи не гниють",
+        image: "https://images.unsplash.com/photo-1611574474484-ced6cb70a2cf?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+
+      {
+        id: 5,
+        name: "Світлий виноград",
+        price: 200,
+        description: "Завжди соковитий",
+        image: "https://images.unsplash.com/photo-1605164881986-cf242f87f711?q=80&w=874&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+
+      {
+        id: 6,
+        name: "Темний виноград",
+        price: 20,
+        description: "Для любителів кислинки",
+        image: "https://images.unsplash.com/photo-1610137512499-5ae9b564f70c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+
+      {
+        id: 7,
+        name: "Червоний виноград",
+        price: 100,
+        description: "Росте за будь-яких умов",
+        image: "https://images.unsplash.com/photo-1635843116188-b67a2f1ef23f?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+
+      {
+        id: 8,
+        name: "Марсіанське манго",
+        price: 150,
+        description: "Ідеально солодкий",
+        image: "https://images.unsplash.com/photo-1744035355878-222dc04f79f5?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+
+      {
+        id: 9,
+        name: "Насіння грейпфруту",
+        price: 90,
+        description: "Проросте будь-де",
+        image: "https://plus.unsplash.com/premium_photo-1670598266836-98649296a02c?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       }
     ];
 
@@ -372,7 +467,7 @@
 
             <h3>${product.name}</h3>
 
-            <p>${product.price} марсиків $</p>
+            <p>${product.price} марсиків ₿</p>
 
             <button onclick="openModal(${product.id})">
               Придбати
@@ -442,7 +537,7 @@
       document.getElementById("modalDescription").innerText = selectedProduct.description;
 
       document.getElementById("modalPrice").innerText =
-        selectedProduct.price + " марсиків";
+        selectedProduct.price + " марсиків ₿";
 
       document.getElementById("productModal").style.display = "flex";
 
@@ -494,7 +589,7 @@
 
         cartItems.innerHTML += `
           <li>
-            ${item.name} - ${item.price} марсиків
+            ${item.name} - ${item.price} марсиків ₿
           </li>
         `;
 
