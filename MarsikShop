@@ -70,10 +70,14 @@
             transition: 0.25s;
         }
 
+        header .title {
+            font-size: 28px;
+        }
+
         header h1 {
             text-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
             font-weight: 400;
-            font-size: 36px;
+            font-size: 12px;
             color: #000;
         }
 
@@ -312,6 +316,35 @@
             transition: 0.25s;
         }
 
+        .footer p {
+            font-weight: 400;
+            font-size: 12px;
+            color: #000;
+            text-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+        }
+
+        .name p {
+            font-weight: 500;
+            font-size: 18px;
+            color: #000;
+            text-shadow: 0 5px 5px #c465ff;
+        }
+
+        #creator {
+            font-weight: 500;
+            text-shadow: 0 5px 5px rgba(255, 188, 99, 0.5), 0 3px 5px #ffbf00;
+        }
+
+        #purpose {
+            font-weight: 500;
+            font-size: 12px;
+            background: linear-gradient(180deg, #c465ff 0%, #753c99 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+        }
+
         .hidden {
             display: none;
         }
@@ -323,7 +356,10 @@
         <div id="stars3"></div>
         <div></div>
     <header>
-        <h1>Магазин рослин із марсіанських теплиць</h1>
+        <div id="title">
+            <h1 class="title">MarsikShop</h1>
+            <h1>Магазин овочів та фруктів із марсіанських теплиць</h1>
+        </div>
 
         <nav>
         <button onclick="showLogin()">Увійти</button>
@@ -387,7 +423,7 @@
 
       {
         id: 2,
-        name: "Насіння червоних томатів",
+        name: "Десертні томати",
         price: 90,
         description: "Вирощено в теплицях бази Olympus.",
         image: "https://images.unsplash.com/photo-1546094096-0df4bcaaa337"
@@ -398,7 +434,7 @@
         name: "Паростки салату",
         price: 60,
         description: "Швидко ростуть навіть на Марсі.",
-        image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061"
+        image: "https://plus.unsplash.com/premium_photo-1675237625967-2f4a872d73a7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       },
 
       {
@@ -443,10 +479,18 @@
 
       {
         id: 9,
-        name: "Насіння грейпфруту",
+        name: "Грейпфрут рожевий",
         price: 90,
         description: "Проросте будь-де",
         image: "https://plus.unsplash.com/premium_photo-1670598266836-98649296a02c?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+
+      {
+        id: 10,
+        name: "Марсіанські банани",
+        price: 70,
+        description: "Кожна мавпа зацінить",
+        image: "https://images.unsplash.com/photo-1676495706102-ca1be8fdf676?q=80&w=1115&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       }
     ];
 
@@ -622,7 +666,17 @@
     </script>
 
     <footer>
-    <!-- Підвал сайту -->
+        <div class="footer">
+            <div class="name">
+                <p>MarsikShop</p>
+            </div>
+            <div class="creator">
+                <p>Сайт створив <span id="creator">Гринчук Артем</span></p>
+            </div>
+            <div class="purpose">
+                <p>Сайт створено для участі в конкурсі <a href="https://logikaschool.com/logirase_2026" id="purpose">LogiRace 2026</a></p>
+            </div>
+        </div>
     </footer>
 
 </body>
